@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Apache Hudi Lakehouse ETL</title>
+    <meta name="description" content="Apache Hudi Lakehouse ETL" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/jpeg/amey_meher_photo.jpg"
+              alt="Amey Meher Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Amey Meher</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./assets/pdf/Amey_Meher_Resume.pdf" class="header__link" download="Amey_Meher_Resume.pdf"> Resume </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Apache Hudi Lakehouse ETL</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Created ETL processes for source agnostic data ingestion, CDC workload, and async clustering job for removing small file issue
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="https://github.com/ameymeher/Hudi-Lakehouse-ETL" class="btn btn--bg" target="_blank">Github Link</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/png/hudi_lakehouse.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                This repository contains various data ingestion and processing workflows designed to handle diverse data sources to manage an Apache Hudi lakehouse architecture.
+                The processes include data ingestion from multiple sources, CDC (Change Data Capture), and clustering for solving problems related to small files.
+              </p>
+              <p class="project-details__desc-para">
+                The ETL processes include:
+              </p>
+              <ul class="project-details__desc-para">
+                <li><strong>Ingestion from Parquet Source</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/parquet_to_hudi.png" alt="parquet_to_hudi" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Ingesting parquet files from a source to an Apache Hudi table. This process ensures that data stored in Parquet format is efficiently loaded into the Hudi table, enabling faster query performance and better data management.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>Ingestion from CSV Source</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/csv_to_hudi.png" alt="csv_to_hudi" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Ingesting CSV files from a source to an Apache Hudi table. This process handles the conversion of CSV data into a format that can be efficiently queried and managed within the Hudi ecosystem.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>Incremental Pull from Postgres</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/postgres_incremental_data_load_to_hudi.png" alt="postgres_incremental_data_load_to_hudi" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Fetching the latest data inserted or updated in a Postgres table into an Apache Hudi table. This ensures that the Hudi table is always up-to-date with the latest changes from the Postgres database.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>Ingestion from Kafka Source</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/kafka_to_hudi.png" alt="kafka_to_hudi" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Fetching data from a Kafka topic to an Apache Hudi table. This process allows for real-time data ingestion from Kafka streams, ensuring that the Hudi table reflects the latest data from the Kafka topic.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>Ingestion from Kafka Source using SchemaRegistry</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/kafka_schema_registry_load.png" alt="kafka_schema_registry_load" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Fetching data from a Kafka topic to an Apache Hudi table, while managing the schema for the Kafka topic in a registry. This makes the process more manageable and ensures schema consistency.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>Ingestion from Multiple Homogeneous Sources</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/multiple_csv_to_hudi.png" alt="multiple_csv_to_hudi" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Apache Hudi job to ingest data from multiple homogeneous sources at a time, such as reading multiple CSV files. This process simplifies the ingestion of data from similar sources into a single Hudi table.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>Apache Hudi Continuous Mode Ingestion and using Transformer while loading</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/continuous_load.png" alt="continuous_load" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Apache Hudi job scanning for changes in the source periodically and ingesting data from the source. It also applies light transformations while loading using a transformer, ensuring data is always current and properly formatted.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>Ingestion from Hudi Source</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/hudi_to_hudi.png" alt="hudi_to_hudi" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Creating a silver data layer from a bronze data layer of Hudi tables. This process involves transforming and optimizing data from one Hudi table to another, improving data quality and query performance.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>Load to MinIO</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/minio_load.png" alt="minio_load" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Managing the data lake on a MinIO platform, making it similar to loading the data on AWS S3. This process ensures that data is stored efficiently and can be accessed quickly from the MinIO storage.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>CDC Load from Logs</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/cdc_load.png" alt="cdc_load" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Change data capture pipeline, utilizing Debezium and Kafka connector to fetch the updated data from a Postgres instance and update on the Apache Hudi lakehouse. This ensures that the Hudi table reflects the latest changes from the source database.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>Async Clustering - Removing Small File Issue</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/async_clustering.png" alt="async_clustering" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Asynchronous Apache Hudi job to address the small file issue, improving read efficiency for Hudi tables. This process consolidates small files into larger ones, optimizing storage and query performance.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+                <li><strong>Generic Multi-Table Postgres Ingestion</strong>
+                  <div align="center" style="margin: 20px 0;">
+                    <img src="images/generic_table_load.png" alt="generic_table_load" width="60%" height="60%" style="margin-right: 10px;"/>
+                  </div>
+                  <p class="project-details__desc-para">
+                    Generic code for loading multiple Postgres tables in incremental mode to Apache Hudi. This process simplifies the ingestion of data from multiple tables, ensuring that each table is kept up-to-date in the Hudi lakehouse.
+                  </p>
+                  <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                </li>
+              </ul>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">Apache Spark</div>
+                <div class="skills__skill">Apache Hudi</div>
+                <div class="skills__skill">Kafka</div>
+                <div class="skills__skill">Postgres</div>
+                <div class="skills__skill">Debezium</div>
+                <div class="skills__skill">MinIO</div>
+                <div class="skills__skill">Parquet</div>
+                <div class="skills__skill">Schema Registry</div>
+                <div class="skills__skill">Docker</div>
+                <div class="skills__skill">Visual Studio</div>
+                <div class="skills__skill">Hadoop</div>
+                <div class="skills__skill">Hive</div>
+                <div class="skills__skill">Java</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">Artifacts</h3>
+              <a
+                href="https://github.com/ameymeher/Hudi-Lakehouse-ETL"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ameymeher/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/ameymeher">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/hyperion_amey/?hl=en">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Amey Meher</h4>
+            <p class="main-footer__short-desc">
+              Follow me on social media for more updates
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          &copy; Copyright 2021. Made by Amey Meher
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

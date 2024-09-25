@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dopefolio</title>
-    <meta name="description" content="Portfolio Template for Developer" />
+    <title>Amey's Portfolio</title>
+    <meta name="description" content="Amey Meher's Portfolio" />
 
     <link rel="stylesheet" href="css/style.css" />
 
@@ -44,6 +44,9 @@
             </li>
             <li class="header__link-wrapper">
               <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./assets/pdf/Amey_Meher_Resume.pdf" class="header__link" download="Amey_Meher_Resume.pdf"> Resume </a>
             </li>
           </ul>
           <div class="header__main-ham-menu-cont">
@@ -212,10 +215,10 @@
                 Created ETL processes for source agnostic data ingestion, CDC workload, and async clustering job for removing small file issue
               </p>
               <a
-                href="./project-1.html"
+                href="./apache_hudi_project.html"
                 class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Case Study</a
+                target="_self"
+                >Know More</a
               >
             </div>
           </div>
@@ -231,37 +234,76 @@
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Android application based on Proximity reminder : Oncue</h3>
               <p class="projects__row-content-desc">
-                Awarded first place for amassing 500+ downloads on Playstore for a Hackathon in collaboration with Facebook developers’ circle
+                Awarded first place for amassing 500+ downloads on Playstore for a Hackathon in collaboration with Facebook developers' circle
               </p>
               <a
                 href="./project-2.html"
                 class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
-                >Case Study</a
+                >Know More</a
               >
             </div>
           </div>
+          <!-- New centered image -->
+          <div style="text-align: center;">
+            <img
+              src="./assets/png/projects_soon.png"
+              alt="Adding more projects soon"
+              class="projects__row-img"
+              style="max-width: 100%; height: auto;"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="work_ex" class="projects sec-pad"></section>
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Work Experiences</span>
+          <span class="heading-sec__sub">
+            Here are some some of my work experiences
+          </span>
+        </h2>
+
+        <div class="projects__content">
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
+                src="./assets/png/ibm_quantum_logo.png"
                 alt="Software Screenshot"
                 class="projects__row-img"
                 loading="lazy"
               />
             </div>
             <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Stock Price Prediction using Graph Neural Networks</h3>
-              <p class="projects__row-content-desc">
-                Developed a stock price prediction system using GCN and LSTM models. Implemented using PyTorch and TensorFlow frameworks
-              </p>
-              <a
-                href="./project-3.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Case Study</a
-              >
+              <h3 class="projects__row-content-title">IBM Quantum Research</h3>
+              <ul class="projects__row-content-desc pretty-list">
+                <li>Implemented a highly scalable RESTful web service using Flask in a microservices architecture for synchronization of metadata in MongoDB backend using Kafka and a stream processor reducing manual efforts of 40+ hours per week.</li>
+                <li>Designed optimized InfluxDB queries on 3 years of minute-level data to derive metrics for efficient job scheduling.</li>
+                <li>Developed an unsupervised clustering model to analyze incidents and automate resolution steps, thereby reducing manual efforts.</li>
+              </ul>
             </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/webp/barclays_logo.webp"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Barclays</h3>
+              <ul class="projects__row-content-desc pretty-list">
+                <li>Led development for 4 ETL projects on managing data pipelines; being responsible for design, code, unit & integration tests, migration to Prod with CI/CD, compliance checks, project documentations and handover to support team.</li>
+                <li>Achieved 99% optimization in Hadoop and Spark jobs used for extracting risk metrics from datasets having millions of records; bringing down the execution time from 8+ hours to 4-5 minutes, solving a scaling bottleneck for a critical service.</li>
+                <li>Integrated data from 50+ tables for creating JSON of over 12000 complex elements. Developed automated jobs to call APIs with these JSONs as payload for parallel testing of a migration project, which reconciled data between 16 different tables.</li>
+                <li>Worked with data engineers, product managers and data scientists, representing key insights with data visualization (Power BI) of production data in an intuitive way, which helped us secure stakeholder's signoff for a major project.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
           </div>
         </div>
       </div>
