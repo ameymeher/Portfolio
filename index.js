@@ -38,37 +38,43 @@ headerLogoConatiner.addEventListener('click', () => {
 })
 
 // ... existing code ...
-const track = document.querySelector('.carousel__track');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('#carouselRight');
-const prevButton = document.querySelector('#carouselLeft');
-const slideWidth = slides[0].getBoundingClientRect().width;
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel__track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('#carouselRight');
+  const prevButton = document.querySelector('#carouselLeft');
+  const slideWidth = slides[0].getBoundingClientRect().width;
 
-let currentIndex = 0;
+  // Arrange the slides next to one another
+  const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+  };
+  slides.forEach(setSlidePosition);
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
-  track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-  currentSlide.classList.remove('current-slide');
-  targetSlide.classList.add('current-slide');
-};
+  const moveToSlide = (track, currentSlide, targetSlide) => {
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+  };
 
-slides.forEach((slide, index) => {
-  slide.style.left = slideWidth * index + 'px';
-});
+  // When I click left, move slides to the left
+  prevButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
 
-nextButton.addEventListener('click', e => {
-  const currentSlide = track.querySelector('.current-slide');
-  const nextSlide = currentSlide.nextElementSibling;
-  if (nextSlide) {
-    moveToSlide(track, currentSlide, nextSlide);
-  }
-});
+    if (prevSlide) {
+      moveToSlide(track, currentSlide, prevSlide);
+    }
+  });
 
-prevButton.addEventListener('click', e => {
-  const currentSlide = track.querySelector('.current-slide');
-  const prevSlide = currentSlide.previousElementSibling;
-  if (prevSlide) {
-    moveToSlide(track, currentSlide, prevSlide);
-  }
+  // When I click right, move slides to the right
+  nextButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+
+    if (nextSlide) {
+      moveToSlide(track, currentSlide, nextSlide);
+    }
+  });
 });
 // ... existing code ...
